@@ -1,3 +1,5 @@
+//Background de avatar e informações
+
 import React, { ReactNode } from "react";
 import { styles } from "./styles";
 import { LinearGradient } from "expo-linear-gradient";

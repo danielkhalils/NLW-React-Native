@@ -27,10 +27,25 @@ export const styles = StyleSheet.create({
     fontSize: 15,
   },
 
-  checked: {
-      width: 10,
-      height: 10,
+
+  //quadradrado check
+  check: { 
+      width: 12,
+      height: 12,
       backgroundColor: theme.colors.secondary100,
-      alignSelf: 'flex-end'
+      alignSelf: 'flex-end',
+      marginRight: 7,
+      borderBottomColor: theme.colors.secondary50,
+      borderWidth: 0.5,
+      borderRadius: 3
+  },
+
+  checked: {
+    width: 10,
+    height: 10,
+    backgroundColor: theme.colors.primary,
+    alignSelf: 'flex-end',
+    marginRight: 7,
+    borderRadius: 3
   }
 });

@@ -1,3 +1,5 @@
+//Confugurando o ButtonAdd
+
 import React from 'react';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { MaterialCommunityIcons } from '@expo/vector-icons';

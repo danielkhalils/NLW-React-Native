@@ -1,3 +1,5 @@
+//Card de Avatar Imagem
+
 import React from "react";
 import { theme } from "../../global/styles/theme";
 import { styles } from "./styles";
