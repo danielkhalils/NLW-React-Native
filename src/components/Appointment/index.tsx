@@ -37,8 +37,17 @@ export function Appointment({ data, ...rest }: Props) {
         <View style={styles.container}>
             <GuildIcon />
 
-            <View style={styles.content}>
-                <View style={styles.header}>
+            <View style={styles.content}> 
+                    <View style={styles.header}>
+
+                        <Text style={styles.title}>
+                            { data.guild.name }
+                        </Text>
+
+                        <Text style={styles.category}>
+                            { category.title }
+                        </Text>
+                    </View>
 
                     <View style={styles.footer} >                       
                         <View style={styles.dateInfo}>
@@ -48,31 +57,18 @@ export function Appointment({ data, ...rest }: Props) {
                                 {data.date}
                             </Text>
                         </View>
+
+                    <View style={styles.playersInfo}>
+                        <PlayerSvg fill={ owner ? primary : on }/>
+
+                        <Text style={[
+                            styles.player,
+                            { color: owner ? primary : on }
+                        ]}>
+                            { owner ? 'Anfitrião' : 'Visitante'}
+                        </Text>
                     </View>
-                
-                    
-                    <Text style={styles.title}>
-                        { data.guild.name }
-                    </Text>
-
-                    <Text style={styles.category}>
-                        { category.title }
-                    </Text>
-                    
                 </View>
-
-                <View style={styles.playersInfo}>
-                    <PlayerSvg fill={ owner ? primary : on }/>
-                </View>
-
-                <Text style={[
-                    styles.players,
-                    { color: owner ? primary : on }
-                ]}>
-                    { owner ? 'Anfitrião' : 'Visitante'}
-          
-                </Text>
-
             </View>
         </View>
     </RectButton>

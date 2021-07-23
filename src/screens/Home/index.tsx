@@ -3,9 +3,10 @@ import { View, FlatList } from "react-native";
 import { styles } from "./style";
 import { Profile } from "../../components/Profile";
 import { ButtonAdd } from "../../components/ButtonAdd";
-import { ListHeader } from "../../components/ListHeader/indes";
+import { ListHeader } from "../../components/ListHeader";
 import { CategorySelect } from "../../components/CategorySelect";
 import { Appointment } from "../../components/Appointment";
+import { ListDivider } from "../../components/ListDivider";
 
 
 export function Home() {
@@ -13,6 +14,19 @@ export function Home() {
 
   const appointments = [ {
     id: '1',
+    guild: {
+      id:'1',
+      name: 'Lendários',
+      icon: null,
+      owner: true
+    },
+    category: '1',
+    date: '22/06 às 20:40h',
+    description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+  }, 
+  
+  {
+    id: '2',
     guild: {
       id:'1',
       name: 'Lendários',
@@ -33,12 +47,11 @@ export function Home() {
 
   return (
     <View>
-      <View style={styles.header}>
+      <View style={styles.header}> 
         <Profile />
         <ButtonAdd />
       </View>
       
-      <View>
         <CategorySelect
           CategorySelected={category}
           setCategory={handleCategorySelect}
@@ -48,7 +61,7 @@ export function Home() {
           <ListHeader 
             title='Partidas Agendadas'
             subtitle='Total 6'
-          />
+          /> 
 
           <FlatList 
             data={appointments}
@@ -56,11 +69,11 @@ export function Home() {
             renderItem={({ item }) => (
               <Appointment data={item} />
             )}
-          />
-
-        </View>
+            ItemSeparatorComponent={() => <ListDivider/>}
+            style={styles.matches}
+            showsHorizontalScrollIndicator={false}
+            />
       </View> 
     </View>
-
   );
 }

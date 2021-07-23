@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text400,
     color: theme.colors.highlight,
     fontSize: 13,
-    marginRight: 24,
+    marginRight: 24
   },
 
   footer: {
@@ -52,14 +52,14 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text500,
     color: theme.colors.heading,
     fontSize: 13,
-    marginLeft: 7,
+    marginLeft: 7
   },
 
   player: {
     fontFamily: theme.fonts.text500,
     fontSize: 13,
     marginLeft: 7,
-    marginRight: 24,
+    marginRight: 24
   },
 
 });
