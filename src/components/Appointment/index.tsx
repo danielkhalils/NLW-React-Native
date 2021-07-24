@@ -25,7 +25,7 @@ export type AppointmentProps = {
 
 
 type Props = RectButtonProps & {
-  data: AppointmentProps;
+  data: AppointmentProps
 }
 
 export function Appointment({ data, ...rest }: Props) {

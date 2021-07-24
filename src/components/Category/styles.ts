@@ -14,15 +14,14 @@ export const styles = StyleSheet.create({
   content: {
       width: 100,
       height: 116,
-      backgroundColor: theme.colors.secondary40,
       borderRadius: 8,
-      justifyContent: 'space-between',
       alignItems: 'center',
-      paddingVertical: 7
+      justifyContent: 'space-between',
+      paddingVertical: 20
   },
 
   title: {
-    fontFamily: theme.fonts.text500,
+    fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
     fontSize: 15,
   },
@@ -32,9 +31,10 @@ export const styles = StyleSheet.create({
   check: { 
       width: 12,
       height: 12,
+      top: 7,
+      right: 7,
+      position: 'absolute',
       backgroundColor: theme.colors.secondary100,
-      alignSelf: 'flex-end',
-      marginRight: 7,
       borderBottomColor: theme.colors.secondary50,
       borderWidth: 0.5,
       borderRadius: 3
@@ -43,9 +43,10 @@ export const styles = StyleSheet.create({
   checked: {
     width: 10,
     height: 10,
+    top: 7,
+    right: 7,
+    position: 'absolute',
     backgroundColor: theme.colors.primary,
-    alignSelf: 'flex-end',
-    marginRight: 7,
     borderRadius: 3
   }
 });

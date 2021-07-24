@@ -1,42 +1,43 @@
-//Cards de categorias
-
 import React from 'react';
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { ScrollView } from 'react-native';
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+
 import { styles } from './styles';
 import { categories } from '../../utils/categories';
+
 import { Category } from '../Category';
 
-type Props = { 
-  CategorySelected: string;
-  setCategory: (categoryId : string) => void;
+type Props = {
+  categorySelected: string;
+  setCategory: (categoryId: string) => void;
+  hasCheckBox?: boolean;
 }
 
-export function CategorySelect({
-  CategorySelected, 
-  setCategory
-} : Props) {
-
-  return (
-    <ScrollView  
-      horizontal 
-      style={styles.container} //estilo container
-      showsHorizontalScrollIndicator={false} //desabilitar barra de rolagem
-      contentContainerStyle={{paddingRight: 40}} //espaçamento final da lista esteja alinhado corretamente
-     >
-       {
-         categories.map(category => ( 
-           <Category
+export function CategorySelect({ 
+  categorySelected, 
+  setCategory,
+  hasCheckBox = true,
+}: Props){
+  
+  return(
+    <ScrollView
+      horizontal
+      style={styles.container}  
+      showsHorizontalScrollIndicator={false}  
+      contentContainerStyle={{ paddingRight: 40 }}
+    >
+      {
+        categories.map(category => (
+          <Category 
             key={category.id}
             title={category.title}
             icon={category.icon}
-            checked={category.id === CategorySelected}
+            checked={category.id === categorySelected}
             onPress={() => setCategory(category.id)}
-           >
-             
-           </Category> //categorias de cards
-         ))
-       }
-     </ScrollView>
+            hasCheckBox={hasCheckBox}
+          />
+        ))
+      }
+    </ScrollView>
   );
 }

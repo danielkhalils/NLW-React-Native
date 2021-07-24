@@ -7,7 +7,7 @@ import { ListHeader } from "../../components/ListHeader";
 import { CategorySelect } from "../../components/CategorySelect";
 import { Appointment } from "../../components/Appointment";
 import { ListDivider } from "../../components/ListDivider";
-
+import { Background } from "../../components/Background";
 
 export function Home() {
   const [category, setCategory] = useState('')
@@ -46,14 +46,14 @@ export function Home() {
   }
 
   return (
-    <View>
+    <Background>
       <View style={styles.header}> 
         <Profile />
         <ButtonAdd />
       </View>
       
         <CategorySelect
-          CategorySelected={category}
+          categorySelected={category}
           setCategory={handleCategorySelect}
         />
 
@@ -74,6 +74,6 @@ export function Home() {
             showsVerticalScrollIndicator={false}
             />
       </View> 
-    </View>
+    </Background>
   );
 }
