@@ -71,7 +71,7 @@ export function Home() {
             )}
             ItemSeparatorComponent={() => <ListDivider/>}
             style={styles.matches}
-            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
             />
       </View> 
     </View>
