@@ -8,9 +8,12 @@ import { CategorySelect } from "../../components/CategorySelect";
 import { Appointment } from "../../components/Appointment";
 import { ListDivider } from "../../components/ListDivider";
 import { Background } from "../../components/Background";
+import { useNavigation } from "@react-navigation/native";
 
 export function Home() {
   const [category, setCategory] = useState('')
+
+  const navigation = useNavigation();
 
   const appointments = [ {
     id: '1',
@@ -42,8 +45,11 @@ export function Home() {
 //se o Id atual é mesmo que está sendo clicado, serve para desmarcá-lo
   function handleCategorySelect(categoryId: string){
     categoryId === category ? setCategory('') : setCategory(categoryId);
-
   }
+
+funtion handleAppointmentDetails(){
+  navigation.navigate('AppointmentDetails');
+}
 
   return (
     <Background>
@@ -67,7 +73,10 @@ export function Home() {
             data={appointments}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
-              <Appointment data={item} />
+              <Appointment 
+                data={item}
+                onPress={handleAppointmentDetails} 
+              />
             )}
             ItemSeparatorComponent={() => <ListDivider/>}
             style={styles.matches}
