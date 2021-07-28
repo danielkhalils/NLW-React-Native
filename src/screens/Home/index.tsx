@@ -41,14 +41,15 @@ export function Home() {
     description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
   }
 ]
+
 //função para saber se o category tem algo nele
 //se o Id atual é mesmo que está sendo clicado, serve para desmarcá-lo
   function handleCategorySelect(categoryId: string){
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
 
-funtion handleAppointmentDetails(){
-  navigation.navigate('AppointmentDetails');
+function handleAppointmentDetails(){
+  navigation.navigate('AppointmentDetails')
 }
 
   return (
