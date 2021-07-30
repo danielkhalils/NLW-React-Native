@@ -29,7 +29,7 @@ export function AuthRoutes() {
       />
 
       <Screen 
-        name="Home" 
+        name="AppointmentDetails" 
         component={AppointmentDetails} 
       />
 

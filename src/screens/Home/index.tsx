@@ -11,7 +11,7 @@ import { Background } from "../../components/Background";
 import { useNavigation } from "@react-navigation/native";
 
 export function Home() {
-  const [category, setCategory] = useState('')
+  const [category, setCategory] = useState('');
 
   const navigation = useNavigation();
 
@@ -48,9 +48,9 @@ export function Home() {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
 
-function handleAppointmentDetails(){
-  navigation.navigate('AppointmentDetails')
-}
+  function handleAppointmentDetails(){
+    navigation.navigate('AppointmentDetails')
+  }
 
   return (
     <Background>
@@ -76,7 +76,7 @@ function handleAppointmentDetails(){
             renderItem={({ item }) => (
               <Appointment 
                 data={item}
-                onPress={handleAppointmentDetails} 
+                onPress={handleAppointmentDetails} //função para abrir os detalhes
               />
             )}
             ItemSeparatorComponent={() => <ListDivider/>}
