@@ -8,6 +8,9 @@ import { theme } from "../../global/styles/theme";
 import BannerImg from '../../assets/banner.png';
 import { ListHeader } from "../../components/ListHeader";
 import { styles } from "./styles";
+import { Member } from "../../components/Member";
+import { ListDivider } from "../../components/ListDivider";
+import { ButtonIcon } from "../../components/ButtonIcon/Index";
 
 export function AppointmentDetails(){
     const members = [
@@ -16,7 +19,7 @@ export function AppointmentDetails(){
             username: 'Jujuba',
             avatar_url: 'https://github.com/jucebrasil.png',
             statys: 'online'
-        }
+        },
 
         {
             id: '2',
@@ -56,7 +59,6 @@ export function AppointmentDetails(){
                         É hoje que vamos chegar ao challenger sem perder uma partida da md10
                     </Text>
                 </View>
-
             </ImageBackground>
 
             <ListHeader
@@ -68,12 +70,16 @@ export function AppointmentDetails(){
                 data={members}
                 keyExtractor={item => item.id}
                 renderItem={({item}) => (
-                    
-                )}
-            >
+                    <Member data={item}>
 
-            </FlatList>
-            
+                    </Member>
+                )} 
+                ItemSeparatorComponent={() => <ListDivider />}
+                style={styles.members}
+            />
+            <View style={styles.footer}>
+                <ButtonIcon title="Entrar na partida"/>
+            </View>
         </Background>
     );
 }
