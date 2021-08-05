@@ -53,8 +53,33 @@ export function AppointmentCreate(){
                         </Feather>
                     </View>
                 </RectButton>
-               <SmallInput/>
-            </View>
+               
+               <View style={styles.field}>
+                    <SmallInput maxLength={2}/>
+                    <Text style={styles.label}>
+                        Dia e mês
+                    </Text>
+               
+                    <View style={styles.column}>
+                        <Text style={styles.divider}>
+                           /
+                        </Text>
+                        <SmallInput maxLength={2}/>
+                    </View>
+                </View>
+
+                <SmallInput maxLength={2}/>
+                    <Text style={styles.label}>
+                        Dia e mês
+                    </Text>
+               
+                    <View style={styles.column}>
+                        <Text style={styles.divider}>
+                           /
+                        </Text>
+                        <SmallInput maxLength={2}/>
+                    </View>
+                </View>
         </Background>
     );
 }
