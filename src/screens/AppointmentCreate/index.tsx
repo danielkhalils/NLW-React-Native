@@ -4,7 +4,7 @@ import {
     View, 
     ScrollView, 
     KeyboardAvoidingView, 
-    Platform
+    Platform,
 } from 'react-native';
 import { Background } from "../../components/Background";
 import { Header } from "../../components/Header";
@@ -122,7 +122,7 @@ export function AppointmentCreate(){
                     </View>
                 </View>
 
-            </ScrollView>                    
+            </ScrollView>              
         </KeyboardAvoidingView>
     );
 }
