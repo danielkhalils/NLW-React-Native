@@ -22,9 +22,9 @@ export function Guilds(){
                 renderItem={({item}) => (
                       <Guild data={item}/>
                 )}
-                showsHorizontalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false} //sem barra lateral
                 ItemSeparatorComponent={() => <ListDivider/>}
-                style={styles.guilds}
+                style={styles.guilds} 
             />
         </View>
     );
