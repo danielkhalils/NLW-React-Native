@@ -37,9 +37,9 @@ export function Guilds({handleGuildSelect}: Props){
                         onPress={() => handleGuildSelect(item)}    
                     />
                 )}
-                showsHorizontalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false} //sem barra lateral
                 ItemSeparatorComponent={() => <ListDivider/>}
-                style={styles.guilds}
+                style={styles.guilds} 
             />
         </View>
     );

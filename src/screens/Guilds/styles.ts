@@ -8,6 +8,6 @@ export const styles = StyleSheet.create({
     },
 
     guilds:{
-        width: '100%'
+        width: '100%',
     }
 })
