@@ -27,13 +27,15 @@ export function AppointmentCreate(){
 
     function handleOpenGuilds(){
         setOpenGuildsModal(true);
-
     };
    
+    function handleCloseGuilds(){
+        setOpenGuildsModal(false);
+    };
+
     function handleGuildSelect(guildSelect: GuildProps){
         setOpenGuildsModal(false);
         setGuild(guildSelect);
-        
     };
 
     return (
@@ -138,7 +140,7 @@ export function AppointmentCreate(){
 
             </ScrollView>   
 
-            <ModalView visible={openGuildsModal}>
+            <ModalView visible={openGuildsModal} closeModal={handleCloseGuilds}>
                 <Guilds handleGuildSelect={handleGuildSelect}/>
             </ModalView>         
         </KeyboardAvoidingView>
