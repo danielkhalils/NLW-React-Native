@@ -21,6 +21,7 @@ export function ModalView({
         <Modal
             transparent
             animationType='slide'
+            statusBarTranslucent
             {...rest}>
                 
             <TouchableWithoutFeedback onPress={closeModal}>
